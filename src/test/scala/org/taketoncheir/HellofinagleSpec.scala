@@ -5,8 +5,7 @@ import org.taketoncheir.Hellofinagle
 object HellofinagleSpec extends Properties("List") {
 
   property("cumul") = forAll {
-    val hello = Hellofinagle
-    (xs: List[Int]) => hello.cumulative(xs).size == xs.size
+    (xs: List[Int]) => Hellofinagle.cumulative(xs).size == xs.size
   }
 }
 
