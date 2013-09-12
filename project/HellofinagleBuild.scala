@@ -13,10 +13,13 @@ object HellofinagleBuild extends Build {
       scalaVersion := "2.10.2",
       // add other settings here
       resolvers ++= Seq(
-        "Twitter Repository" at "http://maven.twttr.com/"
+        "Twitter Repository" at "http://maven.twttr.com/",
+        "Sonatype Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots",
+        "Sonatype Releases" at "http://oss.sonatype.org/content/repositories/releases"
       ),
       libraryDependencies ++= Seq(
-        "com.twitter" %% "finagle-http" % "6.5.2"
+        "com.twitter" %% "finagle-http" % "6.5.2",
+        "org.scalacheck" %% "scalacheck" % "1.10.1"
       )
     )
   )

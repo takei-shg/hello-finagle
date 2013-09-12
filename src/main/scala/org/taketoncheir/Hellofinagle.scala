@@ -13,4 +13,9 @@ object Hellofinagle extends App {
   lazy val client : Service[HttpRequest, HttpResponse] = Http.newService("www.google.com:80")
 
   Await.ready(server)
+
+  def cumulative (xs: List[Int]): List[Int] = {
+    xs.scanRight(0) {_ + _} .init
+  }
 }
+
